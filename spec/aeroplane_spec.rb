@@ -1,0 +1,3 @@
+require 'aeroplane'
+
+describe Aeroplane
