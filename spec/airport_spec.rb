@@ -55,7 +55,6 @@ describe Airport do
 			expect(airport.land_plane!(plane)).to eq 'bad weather land elsewhere'
 		end
 	end
-	
 
 end
 
