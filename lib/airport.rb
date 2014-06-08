@@ -23,6 +23,7 @@ class Airport
 			# if @good_weather == true && @airport_contents.count <= 4
 			if @good_weather == false
 				puts 'bad weather'
+				return
 			end
 
 			if airport_plane_count? >= 5
