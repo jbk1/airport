@@ -31,12 +31,7 @@ class Airport
 			end
 
     	 @airport_contents << plane
-    # 	elsif self.good_weather? == false
-    # 		puts 'bad weather land elsewhere'
-    # 	else self.airport_plane_count? >=5
-    # 		puts 'bravo tango one niner, gate capacity reached, divert elsewhere, over'
-  		# end
-  		end
+  	end
 
 
 		def full?
