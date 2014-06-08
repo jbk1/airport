@@ -7,7 +7,6 @@ class Aeroplane
 include Weather
 
 	def initialize
-		@taken_off = false
 		@flying = false
 	end
 
@@ -15,12 +14,17 @@ include Weather
 		@flying
 	end
 
-	def taken_off?
-		if take_off_allowed? == true
-			@taken_off = true
-		else
-			@taken_off = false
-		end
+	def taken_off!
+		@flying = true
 	end
+
+
+	# def taken_off?
+	# 	if take_off_allowed? == true
+	# 		@taken_off = true
+	# 	else
+	# 		@taken_off = false
+	# 	end
+	# end
 
 end
