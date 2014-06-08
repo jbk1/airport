@@ -1,11 +1,7 @@
 module Weather
 
-	def good_weather
-		@weather = false
-	end
-
-	def bad_weather
-		@weather = true
+	def good_weather?
+		@good_weather
 	end
 
 end
