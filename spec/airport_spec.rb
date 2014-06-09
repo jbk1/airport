@@ -1,4 +1,5 @@
 require 'airport'
+require 'aeroplane'
 
 describe Airport do
 
@@ -10,7 +11,7 @@ describe Airport do
 			allow(airport).to receive(:good_weather?).and_return(true)
 		end
 
-		context 'airport\'s capacity' do
+		context 'traffic control' do
 			
 			it 'will be empty upon instantiation' do
 				expect(airport.airport_plane_count?).to eq 0
@@ -39,6 +40,18 @@ describe Airport do
 				6.times{airport.land_plane!(plane)}
 				expect(airport.airport_plane_count?).to eq 5
 			end
+
+			xit 'will allow a plane to take off in good weather' do
+				airport.take_off_plane!
+				expect(plane.flying?).to be_true
+
+				# expect plane to receive taken_off
+				# expect @airport contects to be less one plane
+
+			end
+
+
+
 		end
 	end
 

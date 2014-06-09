@@ -18,16 +18,12 @@ include Weather
 		expect(aeroplane).to be_flying
 	end
 
-	xit 'has not taken off' do
-		aeroplane = Aeroplane.new
-		Airport.take_off_allowed? == false
-		expect(aeroplane.taken_off?).not_to be_true
+	it 'has not taken off' do
+		plane = Aeroplane.new
+		airport = Airport.new
+		airport.take_off_allowed?(plane) == false
+		expect(plane.flying?).not_to be_true
 	end
-
-	# it 'has the ability to fly' do
-	# aeroplane = Aeroplane.new
-	# expect(aeroplane).to be_flying
-	# end
 
 end
 

@@ -18,13 +18,4 @@ include Weather
 		@flying = true
 	end
 
-
-	# def taken_off?
-	# 	if take_off_allowed? == true
-	# 		@taken_off = true
-	# 	else
-	# 		@taken_off = false
-	# 	end
-	# end
-
 end

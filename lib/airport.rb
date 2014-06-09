@@ -1,4 +1,5 @@
 require 'weather'
+require 'aeroplane'
 
 class Airport
 
@@ -29,11 +30,11 @@ class Airport
 	  	end	
 		end
 
-		# def check_capicity!
-		# 	if airport_plane_count? > capacity?
-		# 		raise 'this airport is full'
-		# 	end
-		# end	
+		def take_off_allowed?(plane)
+			if @good_weather == true
+				plane.taken_off!
+			end
+		end
 
 		def full?
 			capacity == DEFAULT_CAPACITY
