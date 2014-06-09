@@ -4,7 +4,7 @@ require_relative 'airport'
 
 class Aeroplane
 
-include Weather
+  include Weather
 
 	def initialize
 		@flying = false
@@ -14,8 +14,11 @@ include Weather
 		@flying
 	end
 
-	def taken_off!
+	def take_off!
 		@flying = true
 	end
 
+  def land!
+    @flying = false
+  end
 end
