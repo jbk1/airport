@@ -16,7 +16,7 @@ describe Airport do
 			it 'will be empty upon instantiation' do
 				expect(airport.airport_plane_count?).to eq 0
 			end
-
+# some duplication between take_off method in aeroplane and airport?
 			it 'can have one aeroplane land' do
 				plane.take_off!
 				airport.land_plane!(plane)

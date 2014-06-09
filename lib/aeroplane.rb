@@ -1,10 +1,7 @@
-require_relative 'weather'
-require_relative 'airport'
+require 'airport'
 
 
 class Aeroplane
-
-  include Weather
 
 	def initialize
 		@flying = false

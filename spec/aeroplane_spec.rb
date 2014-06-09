@@ -15,7 +15,7 @@ describe Aeroplane do
 		expect(aeroplane).to be_flying
 	end
 
-	it 'can land' do
+	it 'is not flying after landing' do
 		aeroplane.take_off!
 		aeroplane.land!
 		expect(aeroplane).not_to be_flying

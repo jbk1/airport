@@ -5,7 +5,6 @@ class Airport
 	include Weather
 
 	DEFAULT_CAPACITY = 5
-# Had a problem allocating good or bad weather to an aeroplane object?!
 	
   attr_reader :airport_contents
 
@@ -22,7 +21,7 @@ class Airport
 		if airport_plane_count? >= capacity
   		'bravo tango one niner, gate capacity reached, divert elsewhere, over'
   	elsif good_weather? == false
-  		'cannot land weather is bad'
+  		'weather conditions poor, permission to land denied, divert elsewhere, over'
     else 
     	plane.land!
     	@airport_contents << plane
