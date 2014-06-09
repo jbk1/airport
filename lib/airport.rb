@@ -17,23 +17,29 @@ class Airport
 		end
 
 		def land_plane!(plane)
-			# if @good_weather == true && @airport_contents.count <= 4
-			if airport_plane_count? >= 5
-    	puts 'bravo tango one niner, gate capacity reached, divert elsewhere, over'
-    	else @airport_contents << plane
-    # 	elsif self.good_weather? == false
-    # 		puts 'bad weather land elsewhere'
-    # 	else self.airport_plane_count? >=5
-    # 		puts 'bravo tango one niner, gate capacity reached, divert elsewhere, over'
-  		# end
-  		end	
+			
+			if airport_plane_count? >= capacity
+    		'bravo tango one niner, gate capacity reached, divert elsewhere, over'
+
+    	elsif good_weather? == false
+    		'cannot land weather is bad'
+
+	    else @airport_contents << plane
+
+	  	end	
 		end
+
+		# def check_capicity!
+		# 	if airport_plane_count? > capacity?
+		# 		raise 'this airport is full'
+		# 	end
+		# end	
 
 		def full?
-			capacity? == DEFAULT_CAPACITY
+			capacity == DEFAULT_CAPACITY
 		end
 
-		def capacity?
+		def capacity
 		@capacity = DEFAULT_CAPACITY
 		end
 
