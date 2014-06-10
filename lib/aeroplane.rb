@@ -1,6 +1,3 @@
-require 'airport'
-
-
 class Aeroplane
 
 	def initialize
